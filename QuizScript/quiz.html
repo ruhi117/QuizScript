@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Quiz</title>
+  <link rel="stylesheet" href="styles.css" />
+</head>
+<body class="quiz-page">
+
+    <nav class="navbar">
+    <div class="logo">Quiz<span>Script</span></div>
+    <div class="hamburger" onclick="toggleMenu()">☰</div>
+    <ul class="nav-links" id="navLinks">
+      <li><a href="index.html">🏠Home</a></li>
+      <li><a href="instructions.html">📘Instructions</a></li>
+      <li><a href="quiz.html">🚀Start Quiz</a></li>
+    </ul>
+    
+  </nav>
+
+  
+  <div class="container">
+    <div id="quiz-box" class="question-card">
+      <h2 id="question-text"></h2>
+      <div id="options" class="options"></div>
+      <br>
+      <div class="quiz-buttons">
+   <button onclick="nextQuestion()">Next</button>
+   <button onclick="prevQuestion()">Previous</button>
+   <button onclick="clearSelection()">Clear</button>
+ 
+</div>
+
+    </div>
+  </div>
+
+  <script src="data.js"></script>
+  <script src="script.js"></script>
+  <script>window.onload = loadQuestion;</script>
+
+</body>
+</html>
